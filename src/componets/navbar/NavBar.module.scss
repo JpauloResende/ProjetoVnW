@@ -1,0 +1,23 @@
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #205691;
+    align-items: center;
+    height: 15vh;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        
+    }
+    a {
+        color: #ffffff;
+        font-size: 1.70rem;
+    }
+    .image {
+        height: 10vh;
+        border-radius: 120%;
+        border: solid #00AAFF 4px;
+
+    }
+}
