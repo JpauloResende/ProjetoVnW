@@ -1,16 +1,55 @@
-# React + Vite
+# Connect — Projeto Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Descrição**
+- Projeto de interface para conectar empresas a projetos sociais. Layout responsivo com hero, cards de ações, formulário modal para participar/doar e páginas informativas.
 
-Currently, two official plugins are available:
+**Tecnologias usadas**
+- **React**: biblioteca de UI.
+- **Vite**: bundler e dev server rápido.
+- **React Router DOM**: roteamento de páginas.
+- **Sass / SCSS**: pré-processador para estilos (módulos CSS).
+- **Node.js & npm**: execução de scripts e gerenciamento de dependências.
+- **Babel / plugins do React** (via Vite): transformação JSX.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Instalação (local)**
+1. Instale dependências:
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Rodar servidor de desenvolvimento:
 
-## Expanding the ESLint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Build de produção:
+
+```bash
+npm run build
+npm run preview
+```
+
+**Arquivos importantes**
+- **`src/`**: código-fonte React.
+- **`src/componentes/Inicio/Inicio.jsx`** e **`src/componentes/Inicio/inicio.module.scss`**: hero inicial.
+- **`src/componentes/NavBar/`**: barra de navegação.
+- **`src/componentes/Footer/`**: rodapé.
+- **`src/componentes/AcoesdaConnect/`**: cards e modal de participação.
+- **`src/componentes/Formularios/Formulario.jsx`**: formulário do modal (placeholder de telefone atualizado para `61 999999999`).
+
+**Notas e recomendações**
+- Use o `pattern` do input de telefone seguindo `DD 9XXXXXXXX` (ex.: `61 999999999`).
+- Estilos principais usam CSS Modules (`*.module.scss`) para escopo local.
+- Se houver problemas de layout, cheque estilos com `vh` fixos e dimensões em pixels — preferir `max-width`, `min-height` e unidades responsivas.
+
+**Contribuição**
+- Abra uma issue descrevendo o problema e envie um PR com alterações isoladas por arquivo.
+
+**Licença**
+- Projeto de demonstração / educativo (ver cabeçalho do rodapé para referências).
+
+---
+
+Se quiser, eu rodo o servidor dev aqui e confirmo visualmente as mudanças agora.
