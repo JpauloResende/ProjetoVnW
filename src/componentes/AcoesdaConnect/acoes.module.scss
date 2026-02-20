@@ -1,0 +1,220 @@
+.introAcoes{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+
+    h1{
+        color: #205691;
+        font-family: "Source Sans 3", sans-serif;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 1.05;
+        text-align: center;
+    }
+
+    p{
+        max-width: 880px;
+        width: 90%;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: center;
+        color: #222;
+    }
+}
+
+.acoesContainer{
+    width: 100%;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .acoesCards{
+        margin: 2.5rem 0 4rem;
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    .card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(15, 40, 70, 0.08);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+        &:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(15,40,70,0.12);
+        }
+
+        .thumb{
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+            object-fit: cover;
+            background: #e9eef6;
+        }
+
+        .body{
+            padding: 18px 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1 1 auto;
+            justify-content: space-between;
+        }
+
+        h2{
+            color: #153858;
+            font-family: "Source Sans 3", sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        p{
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #23303b;
+            margin: 0;
+            flex: 1 1 auto;
+        }
+
+        .button{
+            margin-top: 6px;
+            padding: 10px 14px;
+            background-color: #205691;
+            border: none;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-family: "Source Sans 3", sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+
+            a{ color: #fff; text-decoration: none; }
+
+            &:hover{ background-color: #153e6a; }
+        }
+    }
+}
+
+/* Small tweak: make buttons full width on very small screens and limit large-thumb overflow */
+@media (max-width: 420px){
+    .acoesContainer .acoesCards {
+        gap: 16px;
+    }
+
+    .acoesContainer .card .body .button{
+        width: 100%;
+        padding: 12px 16px;
+    }
+}
+
+/* center the whole section using container utility */
+.introAcoes, .acoesContainer{ width: 100%; }
+.introAcoes{ padding: 0 20px; }
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 18, 38, 0.58); // azul escuro translúcido
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  padding: 16px;
+}
+
+.modal {
+  width: min(860px, 96vw);
+  max-height: 88vh;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(33, 91, 146, 0.18);
+
+  // deixa um “teto” com cor do site
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(33, 91, 146, 0.18);
+  background: #f3f7ff;
+  color: #1f5d96;
+
+  cursor: pointer;
+  font-size: 18px;
+
+  display: grid;
+  place-items: center;
+
+  &:hover {
+    background: #e7f0ff;
+  }
+}
+
+
+@media (min-width: 201px) and (max-width: 768px) {
+
+    .introAcoes{
+        h1{
+            font-size: 40px;
+        }
+
+        p{
+            width: 95%;
+            font-size: 18px;
+        }
+    }
+
+    .acoesContainer{
+        .acoesCards{
+            width: 90%;
+
+        img{
+            width: 250px;
+            height: 15vh;
+        }
+
+            .cards{
+                width: 90%;
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                gap: 1rem;
+                h2{
+                    font-size: 20px;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }   
+}

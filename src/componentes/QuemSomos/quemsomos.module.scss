@@ -1,0 +1,80 @@
+.quemSomos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+    background-color: #ffffff;
+
+    .imagem {
+        flex: 1 1 50%;
+        min-height: 60vh;
+        background-image: url('/src/assets/backgroundQuemSomos.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+
+    .textos {
+        flex: 1 1 50%;
+        max-width: 720px;
+        padding: 32px;
+        font-family: "Inter", sans-serif;
+        background: rgba(255,255,255,0.95);
+        border-radius: 8px;
+    }
+
+    .titulo {
+        h1 {
+            color: #205691;
+            font-size: 42px;
+            line-height: 1.05;
+            margin-bottom: 10px;
+        }
+    }
+
+    .conteudo {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        p {
+            font-size: 18px;
+            color: #111111;
+            line-height: 1.7;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .quemSomos {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 12px;
+        gap: 18px;
+
+        .imagem {
+            width: 100%;
+            min-height: 220px;
+            border-radius: 8px;
+        }
+
+        .textos {
+            width: 100%;
+            padding: 18px;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .titulo {
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        .conteudo p {
+            font-size: 16px;
+        }
+    }
+}
